@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Warung Daun Pisang - Pemesanan Menu</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Warung Daun Pisang</h1>
+  <p>Pilih menu, atur jumlahnya, lalu pesan dari meja Anda.</p>
+</header>
+
+<main class="wadah">
+  <section>
+    <div class="filter" id="filter"></div>
+    <div class="daftar" id="daftarMenu"></div>
+  </section>
+
+  <aside>
+    <h2>Pesanan Anda</h2>
+    <div id="isiKeranjang"></div>
+    <div class="ringkasan" id="ringkasan"></div>
+    <div class="info" id="infoDiskon"></div>
+
+    <label for="nama">Nama pemesan</label>
+    <input id="nama" type="text" placeholder="Contoh: Budi">
+    <label for="meja">Nomor meja (1-20)</label>
+    <input id="meja" type="number" min="1" max="20" placeholder="Contoh: 7">
+    <label for="bayar">Metode pembayaran</label>
+    <select id="bayar">
+      <option value="tunai">Tunai</option>
+      <option value="qris">QRIS</option>
+      <option value="kartu">Kartu debit/kredit</option>
+    </select>
+
+    <div class="error" id="pesanError" role="alert"></div>
+    <button class="btn" id="tombolPesan">Pesan sekarang</button>
+    <pre id="struk"></pre>
+  </aside>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

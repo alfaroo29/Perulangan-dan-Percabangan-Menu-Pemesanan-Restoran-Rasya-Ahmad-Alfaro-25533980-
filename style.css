@@ -1,0 +1,46 @@
+:root {
+  --daun: #1f4d3a;
+  --daun-muda: #e3efe7;
+  --kunyit: #e0a21b;
+  --cabai: #c0392b;
+  --kertas: #fbfaf6;
+  --teks: #1d2a24;
+  --garis: #d9ddd4;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: "Segoe UI", system-ui, sans-serif; background: var(--kertas); color: var(--teks); line-height: 1.5; }
+header { background: var(--daun); color: #fff; padding: 28px 20px; }
+header h1 { font-family: Georgia, serif; font-size: 2rem; font-weight: 700; }
+header p { opacity: .85; margin-top: 4px; }
+.wadah { max-width: 1100px; margin: 0 auto; padding: 20px; display: grid; grid-template-columns: 1fr 360px; gap: 24px; align-items: start; }
+.filter { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.filter button { border: 1.5px solid var(--daun); background: transparent; color: var(--daun); padding: 7px 16px; border-radius: 999px; cursor: pointer; font-size: .95rem; }
+.filter button.aktif { background: var(--daun); color: #fff; }
+.daftar { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 14px; }
+.kartu { background: #fff; border: 1px solid var(--garis); border-radius: 10px; padding: 14px; display: flex; flex-direction: column; gap: 6px; }
+.kartu .kat { font-size: .8rem; color: var(--daun); background: var(--daun-muda); align-self: flex-start; padding: 2px 10px; border-radius: 999px; }
+.kartu h3 { font-size: 1.05rem; }
+.kartu .harga { font-weight: 700; color: var(--cabai); margin-top: auto; }
+.kartu button, .btn { background: var(--kunyit); border: none; color: #2b1d00; font-weight: 700; padding: 9px; border-radius: 8px; cursor: pointer; font-size: .95rem; }
+.kartu button:hover, .btn:hover { filter: brightness(.95); }
+aside { background: #fff; border: 1px solid var(--garis); border-radius: 10px; padding: 18px; position: sticky; top: 16px; }
+aside h2 { font-family: Georgia, serif; margin-bottom: 10px; }
+.baris { display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 8px 0; border-bottom: 1px dashed var(--garis); }
+.baris small { color: #5d6b63; display: block; }
+.qty { display: flex; align-items: center; gap: 6px; }
+.qty button { width: 28px; height: 28px; border-radius: 50%; border: 1.5px solid var(--daun); background: #fff; color: var(--daun); font-size: 1.1rem; cursor: pointer; line-height: 1; }
+.kosong { color: #6b776f; padding: 14px 0; }
+.ringkasan { margin: 12px 0; font-size: .95rem; }
+.ringkasan div { display: flex; justify-content: space-between; padding: 2px 0; }
+.ringkasan .total { font-weight: 700; font-size: 1.15rem; border-top: 2px solid var(--teks); margin-top: 6px; padding-top: 6px; }
+.info { background: #fff6dd; border-left: 4px solid var(--kunyit); padding: 8px 10px; font-size: .88rem; margin-bottom: 10px; border-radius: 4px; }
+label { display: block; font-size: .88rem; font-weight: 600; margin: 8px 0 3px; }
+input, select { width: 100%; padding: 9px; border: 1px solid #b9c1b8; border-radius: 6px; font-size: .95rem; background: #fff; }
+input:focus, select:focus, button:focus-visible { outline: 3px solid var(--kunyit); outline-offset: 1px; }
+.btn { width: 100%; margin-top: 14px; padding: 12px; }
+.error { color: var(--cabai); font-size: .88rem; margin-top: 8px; min-height: 1.2em; }
+#struk { display: none; margin-top: 16px; background: var(--kertas); border: 1px dashed var(--teks); padding: 14px; font-family: "Courier New", monospace; font-size: .85rem; white-space: pre-wrap; }
+@media (max-width: 860px) {
+  .wadah { grid-template-columns: 1fr; }
+  aside { position: static; }
+}
